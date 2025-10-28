@@ -15,19 +15,8 @@
             <h1>Mi Pokedex</h1>
         </div>
         <p class="p-2"
-              >Bienvenido a tu Pokedex personal. 
-              
-              Aquí puedes encontrar información sobre todos los Pokémon que has registrado.
+              >Has elegido a {{ pokemon|capfirst }}.
         </p>
-        <ul class="list-group">
-            {% for pokemon in pokemons %}
-                <li class="list-group-item">
-                    <a href="{% url 'pokemon_details' pokemon=pokemon %}">
-                        {{ pokemon|capfirst }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
     </div>
 </body>
 </html>
